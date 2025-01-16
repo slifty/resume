@@ -1,0 +1,50 @@
+{
+	"author": "Daniel Schultz",
+	"keywords": [
+		"Resume",
+		"Resume Generator"
+	],
+	"license": "AGPL-3.0",
+	"description": "An over-engineered resume platform",
+	"name": "resume",
+	"packageManager": "yarn@4.5.2",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/slifty/resume.git"
+	},
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite dev",
+		"format": "npm run format:prettier",
+		"format:prettier": "prettier . --write",
+		"format:eslint": "eslint",
+		"lint": "npm run lint:eslint && npm run lint:prettier",
+		"lint:eslint": "eslint ./src --ext .ts --max-warnings=0",
+		"lint:prettier": "prettier . --check",
+		"lint:swagger": "swagger-spec-validator src/openapi.json",
+		"lint:tsc": "tsc --noEmit -p tsconfig.dev.json",
+		"preview": "vite preview"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.2.5",
+		"@sveltejs/adapter-static": "^3.0.8",
+		"@sveltejs/kit": "^2.15.3",
+		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"@tsconfig/node22": "^22.0.0",
+		"@typescript-eslint/eslint-plugin": "^8.8.0",
+		"@typescript-eslint/parser": "^8.8.0",
+		"eslint": "^8.57.1",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.44.1",
+		"prettier": "^3.4.2",
+		"svelte": "^5.18.0",
+		"svelte-check": "^4.1.4",
+		"typescript": "^5.7.3",
+		"vite": "^6.0.7"
+	},
+	"dependencies": {
+		"@sveltejs/vite-plugin-svelte": "^3.1.2"
+	}
+}
